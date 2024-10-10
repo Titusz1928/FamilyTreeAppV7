@@ -1,0 +1,14 @@
+<div class="dialog-header">
+  <!-- Title -->
+  <h2 mat-dialog-title>Admin mode required</h2>
+  <!-- Close Icon in the top-right corner -->
+  <mat-icon class="close-icon" (click)="onCloseClick()">close</mat-icon>
+</div>
+
+<mat-dialog-content>
+  <p>Please enter the password!</p>
+  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <input type="password" id="password" name="password" ngModel required>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</mat-dialog-content>

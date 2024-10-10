@@ -1,0 +1,52 @@
+::ng-deep .mat-mdc-dialog-surface {
+  --mdc-dialog-container-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 24px;
+  position: relative; /* Enable relative positioning for the container */
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.dialog-header h2 {
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+  margin-right: 16px;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 24px; /* Set the font-size to a reasonable size for better visibility */
+  color: black;
+  position: absolute;
+  top: 10px;  /* Add some padding from the top */
+  right: 10px;  /* Add some padding from the right */
+  width: 36px;  /* Set a fixed width for the icon's circular background */
+  height: 36px;  /* Set a fixed height for the icon's circular background */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure the icon is centered within the circle */
+  background: white;
+  border-radius: 50%;  /* Make the background circular */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for better visibility */
+}
+
+mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-dialog-actions {
+  display: none;  /* Hide the actions section since we're removing the button */
+}
+
+mat-dialog-content p {
+  color: black;
+}

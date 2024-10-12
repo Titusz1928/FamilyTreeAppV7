@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "familytreedatabase-c8bf3": {
+      "hosting": {
+        "familytreeapp": [
+          "familytreedatabase-c8bf3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "familytreedatabase-c8bf3"
+  }
+}

@@ -1,0 +1,39 @@
+.scrollable-container {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Disable both horizontal and vertical scrolling */
+    position: relative;
+    border: 3px solid #ccc; /* Optional */
+    background-color: #ffffff; /* Optional */
+  }
+  
+  svg {
+    width: 100%; /* Ensure the SVG takes up the full width */
+    height: 100%; /* Ensure the SVG takes up the full height */
+    overflow: visible; /* Allow content to overflow without scrollbars */
+  }
+  
+    
+    
+    path{
+      fill:none;
+      stroke:#57bdc3;
+    }
+    
+    text{
+      text-shadow: 
+      -1px -1px 3px white,
+      -1px 1px 3px white,
+      1px -1px 3px white,
+      1px 1px 3px white;
+    }
+  
+    /* Media query for mobile */
+  @media screen and (max-width: 768px) {
+    .scrollable-container {
+      height: auto;  /* Allow container height to adjust based on content */
+      max-height: 70vh;  /* Limit the height to 30% of the viewport height */
+      overflow-y: auto;  /* Enable vertical scrolling if content overflows */
+      padding: 10px;  /* Add padding to create space within the container */
+    }
+  }

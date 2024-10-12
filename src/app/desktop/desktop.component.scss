@@ -1,0 +1,130 @@
+.mat-tab-group, .mat-tab {
+    width: 100%;
+  }
+  
+  .table-container {
+    width: 100%;
+  }
+  
+  .mat-elevation-z8 {
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .mat-header-cell, .mat-cell {
+    padding: 16px; /* Adjust padding as needed */
+    text-align: left; /* Ensure text is aligned to the left */
+    min-width: 120px; /* Prevent cells from being too small */
+  }
+  
+  .mat-header-row, .mat-row {
+    width: 100%;
+  }
+  
+  .mat-header-cell, .mat-cell {
+    flex: 1 1 auto; /* Flex properties to allow proper expansion */
+    word-wrap: break-word; /* Handle long text properly */
+  }
+
+
+  .table-expansion-panel {
+    background-color: #ffffff;
+    color: white;
+    text-shadow: 
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,  
+      -1px 1px 0 #000,  
+      1px 1px 0 #000; /* black outline */
+    cursor: pointer;
+  }
+
+  /* This class is for the title inside the expansion panel */
+.exp-panel-title { 
+  color: #000;
+  text-shadow: none;  /* Remove the outline effect for the title */
+}
+
+  .table-grid{
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .tree-info{
+    color: #9b9b9bc2;
+    font-size: 12px;
+    margin: 10px;
+  }
+  
+  
+  
+  /* Flexbox container for horizontal alignment */
+  .horizontal-layout {
+    display: flex;
+    align-items: center; /* Vertically center-align the items */
+    gap: 20px; /* Space between items */
+    justify-content: flex-start; /* Align items to the start */
+  }
+  
+  /* Adjust label to align with other elements */
+  .expansion-panel-label {
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  
+  /* Ensure the slider takes up the remaining space */
+  .slider-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  /* Ensure buttons have consistent spacing */
+  .button-container, .button-primary {
+    margin-left: 20px;
+  }
+  
+/* Media query to handle smaller screens (mobile devices) */
+@media screen and (max-width: 768px) {
+  /* Adjust the main container for mobile screens */
+  .horizontal-layout {
+    flex-direction: column;  /* Stack items vertically */
+    align-items: flex-start;  /* Align children to the start of the container */
+    gap: 10px;  /* Adjust space between items */
+    padding: 10px;  /* Add padding for better spacing */
+    width: 100%;  /* Ensure the container uses full width */
+    max-height: 50vh;  /* Set a max height to prevent taking the full screen height */
+    overflow-y: auto;  /* Enable scrolling if content overflows */
+  }
+
+  /* Buttons styling */
+  .button-container, .button-primary {
+    margin-left: 0;
+    margin-top: 10px;  /* Add space between buttons when stacked vertically */
+    width: 100%;  /* Make buttons take full width for easier tapping */
+    box-sizing: border-box;  /* Make sure padding is included in width */
+  }
+
+  /* Slider container adjustments */
+  .slider-container {
+    width: 100%;  /* Ensure slider takes full width */
+    margin-top: 10px;  /* Add some space above the slider */
+  }
+
+  /* Example of text adjustment for mobile */
+  .some-text-class {
+    font-size: 14px;  /* Reduce font size for smaller screens */
+    line-height: 1.4;
+  }
+}
+
+@media (hover: none) {
+  .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header {
+    background-color: #ffffff !important;  /* Set background to white when collapsed */
+    color: #000 !important; /* Ensure text remains black */
+  }
+
+  /* Ensure the header does not change color when it's hovered on mobile */
+  .mat-expansion-panel-header:hover {
+    background-color: #ffffff !important; /* No hover effect */
+  }
+}

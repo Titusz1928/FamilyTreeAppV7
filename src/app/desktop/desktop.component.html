@@ -1,0 +1,27 @@
+<div class="table-grid">
+    <mat-accordion>
+      <mat-expansion-panel hideToggle class="table-expansion-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="exp-panel-title"> See other trees </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-grid-list cols="4" rowHeight="100px">
+          <!-- Correct the loop syntax to be Angular-style -->
+          <ng-container *ngFor="let tile of tiles">
+            <mat-grid-tile
+              [colspan]="tile.cols"
+              [rowspan]="tile.rows"
+              [style.background]="tile.color"
+              (click)="onTileClick(tile)">
+              {{ tile.text }}
+            </mat-grid-tile>
+          </ng-container>
+        </mat-grid-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  
+  <div class="scrollable-container">
+    <ftapp-tree-area [treeData]="jsonData"></ftapp-tree-area>
+  </div>
+  <p class="tree-info">{{ tiletext }} tree: {{ jsonData?.info?.nr_people }} people</p>
+  
